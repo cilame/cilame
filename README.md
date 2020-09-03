@@ -1,12 +1,18 @@
-```
-我想雨逆流向上
-周身迎满无数温暖旗帜，乘着风浪昂扬
-与无数巨鲸向天空迁徙，似是住在腹中小人一隅
-且听在鲸腹中遗迹、塌陷历史中的腔鸣
-此时，它正在用力在胸中鼓出气团
-压出长长的云和无数睡梦中被蒸出的回忆圈
-发酵，膨胀，在天空中氤氲蒸馏
-那些被吞下的，蚕食的文明此刻被抛撒在空中浮游
-旧世界的碎片低语穿越云层在你耳畔语卿
-诱人不断滑向深渊太空
+```python
+zstring = (
+'JZHdcoIwEEbveWrUiooWxPKjolbFsaCiqKNG1PIwzW6Sq75ClzLDRch+5+wmwbaDjbMKY6'
+'UbeKlB3+HM1MCJZb6VhYWPBQZz9DJkCY59DAJgk99nj9+HYqqryMLLBod17Ow0zqwqCrdY'
+'nRiZYJWIJJdFDb5HJfN84vDAXzZMYtm8c5ZCZvM850xX4ybxLvR3VCO4KqtaIIv7j16DRU'
+'+NbmAZYJ9oX4zfZNNVLNIwXWFwJTfsG5hGBAs3BjMsOzRYqXh+QCvHzIVwqYHVpR/lFfSR'
+'g+cODHrVzGK6wOWaALncygGjGAUgnEFhwKStge2o5oX6SIPEetlwElfHIwazFWYnwtTa1l'
+'Q94nlIGujPOOuSpsTGnoo+aY1+C4cWjQ3tB2XQDHEwKMeuRJc9MqZh8MWZL7weAWJpiU6L'
+'vyx5SEVSyKtZjn2sE8Nfc6mfhedSCd4LTR6O/7f5jn6KD4ceAG9HZCasNqT/Aw=='
+)
+
+# len(zstring): 484
+import base64, zlib
+zstring = base64.b64decode(zstring)
+zstring = zlib.decompress(zstring,-15)
+string = zstring.decode("utf-8")
+print(string)
 ```
